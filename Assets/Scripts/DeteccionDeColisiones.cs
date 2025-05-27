@@ -6,6 +6,7 @@ public class DeteccionDeColisiones : MonoBehaviour
 {
    void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Contacto");
+        Debug.Log("Contacto con " + collision.gameObject.name);
+        Destroy(collision.gameObject); // el objeto que tiene el script
     }
 }
