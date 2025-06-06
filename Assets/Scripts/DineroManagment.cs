@@ -5,6 +5,7 @@ using UnityEngine;
 public class DineroManagment : MonoBehaviour
 {
     public float playerMoney;
+    public UIManager UIManager;
     public void UpdateMoney(float amount)
     {
         playerMoney += amount;
@@ -16,7 +17,10 @@ public class DineroManagment : MonoBehaviour
         else
         {
             playerMoney += amount;
+            UIManager.UpdateMoneyUI(playerMoney.ToString());
         }
     }
-
+    //public void texto()
+    //UIManager.UpdateMoney(-precio)
+        
 }
