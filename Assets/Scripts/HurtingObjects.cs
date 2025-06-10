@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DineroManagment : MonoBehaviour
+public class HurtingObjects : MonoBehaviour
 {
-    public float playerMoney;
+    public int playerHealth;
     public UIManager UIManager;
-    public bool UpdateMoney(float amount)
+    public bool UpdateHealth(int salud);
     {
         playerMoney += amount;
 
@@ -18,13 +18,13 @@ public class DineroManagment : MonoBehaviour
         else
         {
             playerMoney += amount;
-            UIManager.UpdateMoneyUI(playerMoney.ToString());
+            UIManager.UpdateHealthUI(playerHealth.ToString());
             return true;
         }
     }
     private void Start()
     {
-        UIManager.UpdateMoneyUI(playerMoney.ToString());
+        UIManager.UpdateHealthUI(playerHealth.ToString());
     }
 
 }

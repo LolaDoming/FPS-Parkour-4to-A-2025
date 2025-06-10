@@ -6,9 +6,11 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI txtMoney;
+    public TextMeshProUGUI TxTHealth;
 
     public void UpdateMoneyUI(string moneyAmount)
     {
         txtMoney.text = moneyAmount;
     }
+
 }
