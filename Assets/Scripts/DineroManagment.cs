@@ -6,9 +6,15 @@ public class DineroManagment : MonoBehaviour
 {
     public float playerMoney;
     public UIManager UIManager;
-    public bool UpdateMoney(float amount)
+
+    void Start()
     {
-        playerMoney += amount;
+        uiManager = FindObjectOfType<UIManager>();
+        uiManager.UpdateTxTMoney(playerMoney);
+    }
+
+    public void UpdateMoney(float amount)
+    {
 
         if (playerMoney + amount < 0)
         {
@@ -18,13 +24,9 @@ public class DineroManagment : MonoBehaviour
         else
         {
             playerMoney += amount;
-            UIManager.UpdateMoneyUI(playerMoney.ToString());
+            UIManager.UpdateMoneyUI(playerMoney);
             return true;
         }
-    }
-    private void Start()
-    {
-        UIManager.UpdateMoneyUI(playerMoney.ToString());
     }
 
 }

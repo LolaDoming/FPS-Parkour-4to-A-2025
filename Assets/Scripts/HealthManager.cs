@@ -5,17 +5,27 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     public float playerHealth;
-    public UIManager UIManager;
+    public UIManager uiManager;
 
-// Start is called before the first frame update
+
 void Start()
     {
-        
+        uiManager = FindObjectOfType<UIManager>();
+        uiManager.UpdateTXTHealth(playerHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void UpdateHealth(float amount)
     {
-        
+        if (playerHealth > 0)
+        {
+            playerHealth -= amount;
+            uiManager.UpdateTXTHealth(playerHealth);
+            if(playerHealth <= 0)
+            {
+                Debug.Log("Respawn");
+                SceneManager.LoadScene("Plataformas de madera");
+            }
+        }
     }
 }

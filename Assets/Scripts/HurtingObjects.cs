@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class HurtingObjects : MonoBehaviour
 {
-    public int playerHealth;
-    public UIManager UIManager;
-    public bool UpdateHealth(int salud);
+    public float damage;
+    public HealthManager HealthManager;
 
-        playerMoney += amount;
-
-        if (playerMoney + amount < 0)
-        {
-            //impedir compra
-            return false;
-        }
-        else
-        {
-            playerMoney += amount;
-            UIManager.UpdateHealthUI(playerHealth.ToString());
-            return true;
-        }
-    }
-    private void Start()
+    void Start()
     {
-        UIManager.UpdateHealthUI(playerHealth.ToString());
+        healthManager = FindObjectOfType<HealthManager>();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            healthManager.UpdateHealth(damage);
+        }
     }
 
 }
