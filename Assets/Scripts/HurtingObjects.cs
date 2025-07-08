@@ -7,7 +7,7 @@ public class HurtingObjects : MonoBehaviour
     public int playerHealth;
     public UIManager UIManager;
     public bool UpdateHealth(int salud);
-    {
+
         playerMoney += amount;
 
         if (playerMoney + amount < 0)
