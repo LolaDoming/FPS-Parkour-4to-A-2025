@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Columna 6x0.3 Prefab.prefab.meta
 guid: 4fa83028fb2147743b2a28cb7a566195
 PrefabImporter:
+========
+guid: e341a385af56a2e4eb3b621233b79197
+DefaultImporter:
+>>>>>>>> 9ccd5404a6b304fa37a88fd02aaf05e3bf470f2e:Assets/Scenes/Escena Intento 2.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
