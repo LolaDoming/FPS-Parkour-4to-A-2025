@@ -9,7 +9,8 @@ public class DineroManager : MonoBehaviour
 
     void Start()
     {
-        uiManager.UpdateMoneyUI(playerMoney.ToString());
+        uiManager = FindObjectOfType<UIManager>();
+        uiManager.UpdateTxTMoney(playerMoney);
     }
 
     public bool UpdateMoney(float amount)
@@ -23,7 +24,7 @@ public class DineroManager : MonoBehaviour
         else
         {
             playerMoney += amount;
-            uiManager.UpdateMoneyUI(playerMoney.ToString());
+            uiManager.UpdateTxTMoney(playerMoney);
             return true;
         }
     }

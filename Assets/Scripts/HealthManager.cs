@@ -24,7 +24,6 @@ void Start()
             if(playerHealth <= 0)
             {
                 Debug.Log("Respawn");
-                SceneManager.LoadScene("Plataformas de madera");
             }
         }
     }

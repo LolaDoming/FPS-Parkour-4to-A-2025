@@ -5,7 +5,7 @@ using UnityEngine;
 public class HurtingObjects : MonoBehaviour
 {
     public float damage;
-    public HealthManager HealthManager;
+    public HealthManager healthManager;
 
     void Start()
     {
